@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Jul 11 15:34:07 2022 as: nmap -sT -sV -Pn -p- -A -T4 -oA /home/kali/TryHackMe/SteelMountain/nmap/nmap 10.10.120.195 -->
+<nmaprun scanner="nmap" args="nmap -sT -sV -Pn -p- -A -T4 -oA /home/kali/TryHackMe/SteelMountain/nmap/nmap 10.10.120.195" start="1657568047" startstr="Mon Jul 11 15:34:07 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1657568397" percent="38.32" remaining="564" etc="1657568960"/>
+<taskprogress task="Connect Scan" time="1657568470" percent="45.55" remaining="506" etc="1657568976"/>
+<taskprogress task="Connect Scan" time="1657568470" percent="45.59" remaining="505" etc="1657568975"/>
+<taskprogress task="Connect Scan" time="1657568471" percent="45.60" remaining="506" etc="1657568977"/>
+<taskprogress task="Connect Scan" time="1657568471" percent="45.61" remaining="506" etc="1657568977"/>
+<taskprogress task="Connect Scan" time="1657568474" percent="46.23" remaining="497" etc="1657568971"/>
