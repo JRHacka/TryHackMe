@@ -1,0 +1,92 @@
+# Nmap 7.92 scan initiated Mon Jul 11 15:34:07 2022 as: nmap -sT -sV -Pn -p- -A -T4 -oA /home/kali/TryHackMe/SteelMountain/nmap/nmap 10.10.120.195
+Packet capture filter (device tun0): dst host 10.2.6.185 and (icmp or (tcp and (src host 10.10.120.195)))
+OS detection timingRatio() == (1657569045.219 - 1657569044.717) * 1000 / 500 == 1.004
+OS detection timingRatio() == (1657569048.630 - 1657569048.128) * 1000 / 500 == 1.004
+OS detection timingRatio() == (1657569051.874 - 1657569051.373) * 1000 / 500 == 1.002
+OS detection timingRatio() == (1657569057.330 - 1657569056.827) * 1000 / 500 == 1.006
+OS detection timingRatio() == (1657569061.305 - 1657569060.804) * 1000 / 500 == 1.004
+Nmap scan report for 10.10.120.195
+Host is up (0.18s latency).
+Scanned at 2022-07-11 15:34:07 EDT for 1030s
+Not shown: 65520 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2022-07-11T19:51:16+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=steelmountain
+| Not valid before: 2022-07-10T19:32:34
+|_Not valid after:  2023-01-09T19:32:34
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-07-11T19:51:11+00:00
+5985/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+8080/tcp  open  http               HttpFileServer httpd 2.3
+|_http-server-header: HFS 2.3
+|_http-title: HFS /
+47001/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+49163/tcp open  msrpc              Microsoft Windows RPC
+49164/tcp open  msrpc              Microsoft Windows RPC
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=7/11%OT=80%CT=1%CU=36323%PV=Y%DS=4%DC=T%G=Y%TM=62CC7F3
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10F%CI=I%TS=7)SEQ(SP=102%GC
+OS:D=4%ISR=10F%CI=I%II=I%TS=7)SEQ(SP=102%GCD=1%ISR=10F%TS=7)OPS(O1=M505NW8S
+OS:T11%O2=M505NW8ST11%O3=M505NW8NNT11%O4=M505NW8ST11%O5=M505NW8ST11%O6=M505
+OS:ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=
+OS:80%W=2000%O=M505NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2
+OS:(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%
+OS:F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%
+OS:T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD
+OS:=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL
+OS:=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 4 hops
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 0s, deviation: 1s, median: 0s
+| smb2-time: 
+|   date: 2022-07-11T19:51:11
+|_  start_date: 2022-07-11T19:32:27
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|_  ERROR: No accounts left to try
+|_nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:af:47:98:da:45 (unknown)
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT       ADDRESS
+1   51.02 ms  10.2.0.1
+2   ...
+3   ...
+4   179.04 ms 10.10.120.195
+
+Read from /usr/bin/../share/nmap: nmap-os-db nmap-payloads nmap-protocols nmap-service-probes nmap-services.
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 11 15:51:17 2022 -- 1 IP address (1 host up) scanned in 1030.44 seconds
